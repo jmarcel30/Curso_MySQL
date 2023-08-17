@@ -1,18 +1,27 @@
+/*Inserindo Dados na Tabela (INSERT INTO)
 
+insert into pessoas
+(id, nome, nascimento, sexo, peso, altura, nacionalidade)
+values
+(default, 'carolina', '1987-11-19', 'F', '67.5', '1.54', default);
 
-CREATE DATABASE cadastro
-DEFAULT CHARACTER SET utf8mb4
-DEFAULT COLLATE utf8mb4_general_ci;
+select * from pessoas;  */
 
+/* Opção mais simples*/
+/* insert into pessoas values
+(default, 'Carlos', '1989-11-29', 'M', '97.5', '1.84', default); 
 
-create table pessoas(
-id int not null auto_increment,
-nome varchar (30) not null,
-nascimento date,
-sexo enum ('M', 'F'),
-peso decimal (5,2),
-altura decimal (3,2),
-nacionalidade varchar (20) default 'Brasil',
-primary key (id)
-)DEFAULT CHARACTER SET utf8mb4;
+select * from pessoas; */ 
 
+/* Fazer varios cadstros de uma vez* usando insert into*/
+
+insert into pessoas 
+(id, nome, nascimento, sexo, peso, altura, nacionalidade)
+values
+(default, 'Camila', '1980-12-29', 'F', '87.5', '1.84', default),
+(default, 'João', '1949-05-29', 'M', '78.5', '1.74', default),
+(default, 'Amanda', '1956-07-29', 'F', '56.5', '1.64', 'Japão'),
+(default, 'Carlos', '1978-01-29', 'M', '99.5', '1.94', default),
+(default, 'Jumenta', '1999-09-29', 'F', '56.5', '1.54','Portugal');
+
+select * from pessoas; 
